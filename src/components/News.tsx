@@ -3,34 +3,62 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Button } from './ui/button'
 import { BiSolidAlbum } from 'react-icons/bi'
 import Link from 'next/link'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel'
+import Image from 'next/image'
+import { FaDownload, FaPlay } from 'react-icons/fa6'
 
 type Props = {}
 
 const News = (props: Props) => {
-    return (
-        <div id='news'>
-            <div className='bg-white shadow rounded'>
-                <div className='px-4 py-2 border-b text-xl font-medium text-fuchsia-600 flex gap-1 w-full items-center'>
-                    <BiSolidAlbum />
-                    <h4>News</h4>
-                </div>
-                <div className='lg:p-6 p-3 flex flex-col gap-3'>
-                    <Card className=''>
-                        <CardContent className='max-lg:p-3 py-5 flex flex-col justify-center'>
-                            <CardTitle className='max-lg:text-lg mb-3'>BREAKING NEWS ON TIDE NEWSPAPERS 📰 </CardTitle>
-                            <CardDescription className='lg:text-lg text-md'>
-                                <p>A playlist by Kx The Flow Butler</p>
-                                <p>Kx The Flow Butler drops this new Ep Ascenxion Ep on tide newspapers. <br /> Let's stream and share this great gift to humanity.</p>
-                                <div className='flex justify-end mt-3'>
-                                    <Button size={"sm"} className='max-lg:w-full'><Link href={"https://www.thetidenewsonline.com/2024/08/09/kx-the-flow-butler-drops-new-ep-ascenxion/"} className='text-fuchsia-600'>Read More</Link></Button>
-                                </div>
-                            </CardDescription>
-                        </CardContent>
-                    </Card>
-                </div>
-            </div>
+  return (
+    <div className='flex flex-col min-h-screen md:py-28 py-12 md:px-32 px-4 md:gap-6 gap-3' id='news'>
+      <Carousel>
+        <div className='flex gap-16 mb-6 items-center'>
+          <h3 className='text-3xl font-semibold'>News<span className='hidden md:inline'> in Flow Studio</span></h3>
+          <div className='flex relative'>
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
         </div>
-    )
+        <CarouselContent>
+          <CarouselItem>
+            <div className='flex flex-col bg-white w-full shadow-lg'>
+              <div className='h-full bg-black p-4 flex items-center justify-center'>
+                <Image src={"/assets/kx-image.jpg"} alt='New upload' width={550} height={600} className='object-cover md:min-w-[550px]'></Image>
+              </div>
+              <div className='flex-grow md:p-6 p-4 flex flex-col gap-4'>
+                <h3 className='text-2xl font-semibold'>Recently Released On Tide News</h3>
+                <p className='text-lg text-slate-600'>
+                  An Akwa lbom born gospel artiste, Iniobong Sunday Titus, popularly known as Kx The Flow Butler has released a new album titled ‘ASCENXION’. <br />
+                  The hit album, since it’s release has witnessed a good number of listeners and download from its various music platforms across the federation with possible reactions from his fans. <br />
+                  Flow Butler, who is also a practising architect professionally, gospel rapper and a singer-song writer has released his new EP album with an aim of reaching the top of the music industry in Nigeria. <br />
+                </p>
+                <div className=''>
+                  <Link href={"https://audiomack.com/kx-theflowbutler/playlist/rap-jams"}><Button>View More</Button></Link>
+                </div>
+              </div>
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div className='flex flex-col bg-white w-full shadow-lg'>
+              <div className='h-full bg-black p-4 flex items-center justify-center'>
+                <Image src={"/assets/n2.jpg"} alt='New upload' width={550} height={600} className='object-cover md:min-w-[550px]'></Image>
+              </div>
+              <div className='flex-grow md:p-6 p-4 flex flex-col gap-4'>
+                <h3 className='text-2xl font-semibold'>The First Ascenxion Merch</h3>
+                <p className='text-lg text-slate-600'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dignissimos molestiae. Excepturi, vitae laudantium? Provident quod atque consectetur deserunt, aliquid esse laudantium tenetur quia velit illum. Adipisci vitae tenetur quibusdam.
+                </p>
+                <div className=''>
+                  <Link href={"https://audiomack.com/kx-theflowbutler/playlist/rap-jams"}><Button>View More</Button></Link>
+                </div>
+              </div>
+            </div>
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel>
+    </div>
+  )
 }
 
 export default News

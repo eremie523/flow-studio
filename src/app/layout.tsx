@@ -16,9 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='bg-[aliceblue] overflow-x-hidden'>
-      <NavBar></NavBar>
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='bg-slate-50'>
+      <body className={inter.className}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   )
 }

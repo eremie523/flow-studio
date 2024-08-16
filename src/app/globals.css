@@ -67,9 +67,54 @@
 
 }
 
-.heroBgImage {
-  background-image: url("/assets/aesthetic-landing.png") !important;
-  background-repeat: no-repeat;
+.s {
+  background-position: center;
   background-size: cover;
-  background-position: fixed;
+  background-repeat: no-repeat;
+  min-height: 13rem;
+}
+
+.s1 {
+  background-image: url("/assets/1.jpg");
+}
+
+.s2 {
+  background-image: url("/assets/2.jpg");
+}
+
+.s3 {
+  background-image: url("/assets/3.jpg");
+}
+
+.s4 {
+  background-image: url("/assets/4.jpg");
+}
+
+.s5 {
+  background-image: url("/assets/5.jpg");
+}
+
+.s6 {
+  background-image: url("/assets/6.jpg");
+}
+
+.s7 {
+  background-image: url("/assets/7.jpg");
+}
+
+.s8 {
+  background-image: url("/assets/8.jpg");
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
