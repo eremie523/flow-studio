@@ -24,7 +24,7 @@ const News = (props: Props) => {
           <CarouselItem>
             <div className='flex flex-col bg-white w-full shadow-lg'>
               <div className='h-full bg-black p-4 flex items-center justify-center'>
-                <Image src={"/assets/kx-image.jpg"} alt='New upload' width={550} height={600} className='object-cover md:min-w-[550px]'></Image>
+                <Image src={"/assets/ascenxion.jpeg"} alt='New upload' width={550} height={600} className='object-cover md:min-w-[550px]'></Image>
               </div>
               <div className='flex-grow md:p-6 p-4 flex flex-col gap-4'>
                 <h3 className='text-2xl font-semibold'>Recently Released On Tide News</h3>
